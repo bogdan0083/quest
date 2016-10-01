@@ -1,0 +1,203 @@
+.header
+	padding-top 10px
+	padding-bottom 18px
+	background url(../images/1.jpg) repeat center
+	position relative
+	color black
+	+above(880px)
+		padding-bottom 10px
+	.container
+		position relative
+	.city-choose	
+		position absolute
+		top 0
+		left 10px
+		color: #666
+		a
+			vertical-align bottom
+			padding-bottom 1px
+			position relative
+			overflow hidden
+			display inline-block
+			text-decoration none
+			&:before 
+				content ''
+				width 100%
+				height 1px
+				background-color black
+				opacity 0.1
+				position absolute
+				bottom 0
+				left 0
+			&:after 
+				content ''
+				width 100%
+				height 1px
+				background-color black
+				opacity 1
+				position absolute
+				bottom 0
+				left 0
+				transform translateX(-100%)
+				transition all 0.3s
+			&:hover:after
+				transform none
+		&:hover
+			color $gray-dark
+			.icon
+				sprite($marker_hover)
+		+above(880px)
+			float right
+			position static
+			margin-top 2px
+	.header-date
+		+above(880px)
+			display inline-block
+	.logo
+		margin-top 28px
+		display block
+		position relative
+		z-index 3
+		text-align center
+		+above(880px)
+			max-width 200px
+			float left
+			margin-top 15px
+		+above(1200px)
+			max-width 270px
+			margin-top 4px
+	&-body-middle
+		margin-top 20px
+		text-align center
+		+above(880px)
+			text-align left
+			margin-top 16px
+			.cabinet-nav
+				margin-bottom 10px
+	&-body
+		+above(880px)
+			float left
+			margin-left -200px
+			width 100%
+			padding-left 220px
+		+above(1200px)
+			margin-left -270px
+			padding-left 300px
+	.purple
+		margin-left 8px
+		+above(880px)
+			margin-right 0
+			margin-left 0
+		
+.mobile-menu
+	display block
+	position fixed
+	background-color white
+	right 0
+	top 0
+	overflow auto
+	width 210px
+	background-color white
+	border 1px solid #8794a8
+	transition transform 0.3s
+	transform translateX(100%)
+	z-index 20
+	.main-nav
+		display block
+		a
+			display block
+			padding 10px 0
+			padding-left 6px
+			border-bottom 1px dashed #8784a8
+			margin 0 !important
+			display block
+			span:before, span:after
+				display none !important
+		.icon
+			margin-right 0
+		.icon-wrap
+			width 35px
+			display inline-block
+			vertical-align middle
+			text-align center
+			margin-right 4px
+	&.active
+		transform translateX(0)
+	+above(880px)
+		display none
+
+.main-nav, .cabinet-nav
+	display inline-block
+	> a, > span
+		display inline-block
+		transition all 0.1s
+		margin-right 12px
+		text-decoration none
+		+above(1200px)
+			margin-right 22px
+		&:last-child
+			border-bottom none
+			margin-right 0
+		span
+			vertical-align bottom
+			padding-bottom 1px
+			position relative
+			overflow hidden
+			&:before 
+				content ''
+				width 100%
+				height 1px
+				background-color black
+				opacity 0.1
+				position absolute
+				bottom 0
+				left 0
+			&:after 
+				content ''
+				width 100%
+				height 1px
+				background-color black
+				opacity 1
+				position absolute
+				bottom 0
+				left 0
+				transform translateX(-100%)
+				transition all 0.3s
+	a:hover, > span
+		.icon
+			transition all 0.3s
+			background transparent
+		.icon:before
+			opacity 1
+		span:after
+			transform none
+				
+.cabinet-nav
+	a
+		color: #008ed6
+		&:hover
+			color $blue-light
+			span:after
+				background-color $blue-light
+		span
+			&:after
+				transform none
+				background-color #008ed6
+				
+.main-nav
+	+above(880px)
+		float right
+		margin-top 2px
+	a
+		color $gray
+		&:hover
+			color $gray-dark
+	.purple
+		color $purple
+		&:hover
+			color $blue-light
+			span:after
+				background-color $blue-light
+		span:after
+			transform none
+			background-color #7365c7

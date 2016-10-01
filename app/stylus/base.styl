@@ -1,0 +1,420 @@
+html
+  box-sizing border-box
+  font-size 13px
+  +above(880px)
+    font-size 14px
+    min-height 100%
+    position relative
+*, *:before, *:after 
+  box-sizing inherit
+
+body
+  color white
+  font-size 1rem
+  line-height 1.4
+  background white 
+  font-family 'Blogger Sans', sans-serif
+  font-weight 400
+  overflow-x hidden
+  background url(../images/2.jpg) repeat center
+
+generateClasses($spritesheet_sprites)
+
+a
+  color inherit
+  text-decoration underline
+  &:hover
+    text-decoration none
+    
+.icon
+  display inline-block
+  vertical-align middle
+  position relative
+  margin-right 5px
+  &:before 
+    content ''
+    position absolute
+    top 0 
+    left 0
+    width 100%
+    height 100%
+    opacity 0
+  + span
+    display inline-block
+    vertical-align middle
+    
+.mobile-menu
+  +above(880px)
+    display none
+    
+img
+  max-width 100%
+  
+.nav-trigger
+  display block
+  hamburger-generator()
+  text-align center
+  margin-top 10px
+  position relative
+  z-index 10
+  float right
+  position relative
+  z-index 50
+  &.active
+    hamburger-animation()
+    
+  +above(880px)
+    display none
+    
+.page-wrapper
+  transition all 0.3s
+  //position relative
+  
+  &:before
+    content ''
+    position fixed
+    left 0
+    top 0
+    background-color #fff
+    background-image linear-gradient(to right, rgba(151, 67, 199, 0.49) 0%, rgba(2, 221, 203, 0.49) 50%, rgba(41, 186, 253, 0.49) 100%)
+    width 100%
+    height 100%
+    opacity 0.6
+    z-index 17
+    visibility hidden
+    opacity 0
+    transition opacity 0.3s 0.1s,visibility 0.3s
+  &.active
+    &:before
+      visibility visible 
+      opacity 0.6
+      +above(880px)
+        display none
+      
+
+.container
+  padding 0 10px
+  +above(880px)
+    padding 0 15px
+    
+.i-door
+  &:before
+    sprite($door_hover)
+    
+.i-door-quit
+  &:before
+    sprite($door_quit_hover)
+
+.i-wizard
+  &:before
+    sprite($wizard_hover)
+    
+.i-marker
+  &:before
+    sprite($marker_hover)
+
+.i-key
+  &:before
+    sprite($key_hover)
+    
+.i-menu1
+  &:before
+    sprite($menu1_hover)
+    
+.i-menu2
+  &:before
+    sprite($menu2_hover)
+    
+.i-menu3
+  &:before
+    sprite($menu3_hover)
+    
+.i-menu4
+  &:before
+    sprite($menu4_hover)
+
+.i-king
+  &:before
+    sprite($king_hover)
+     
+.i-wizard-white
+  &:before
+    sprite($wizard_hover)
+.i-hat
+  &:before
+    sprite($hat_hover)
+.i-group
+  &:before
+    sprite($group_hover)
+.i-history
+  &:before
+    sprite($history_hover)
+.i-heart
+  &:before
+    sprite($heart_hover)
+    
+.i-notif
+  &:before
+    sprite($notif_hover)
+    
+.i-notif
+  &:before
+    sprite($notif_hover)
+  
+.i-stick
+  &:before
+    sprite($stick_hover)
+    
+.i-lock
+  &:before
+    sprite($lock_blue)
+.i-door-quit-white
+  &:before
+    sprite($door_quit_hover)
+    
+.i-cross
+  &:hover
+    sprite($cross_hover)
+    width 20px
+.header-link-quit
+  margin-left 10px
+h2
+  font-size 1.7rem
+  
+h1, h2, h4, h4, h5, h6
+  font-weight 500
+  
+.btn
+  display inline-block
+  min-width 125px
+  text-align center
+  padding 10px 0
+  position relative
+  cursor pointer
+  color $blue
+  text-decoration none
+  text-transform lowercase
+  background-color transparent
+  border none
+  &-full
+    width 100%
+  &:before, &:after
+    border-color $blue
+  span:before, span:after
+    border-color $blue
+  &:hover
+    &:before, &:after, span:before, span:after
+      height 50%
+  &:before
+    content ''
+    width 100%
+    height 10%
+    border 1px solid $blue
+    border-bottom 0
+    left 0
+    top 0
+    position absolute
+    transition all 0.3s
+  &:after
+    content ''
+    width 100%
+    height 10%
+    border 1px solid $blue
+    border-top 0
+    left 0
+    bottom 0
+    position absolute
+    transition all 0.3s
+  &-inner
+    &:before
+      content ''
+      width calc(100% - 10px)
+      margin-right 10px
+      height 10%
+      border 1px solid blue
+      border-bottom 0
+      left 5px
+      top 5px
+      position absolute
+      transition all 0.3s
+    &:after
+      content ''
+      width calc(100% - 10px)
+      margin-right 10px
+      height 10%
+      border 1px solid blue
+      border-top 0
+      left 5px
+      bottom 5px
+      position absolute
+      transition all 0.3s
+  &-white
+    color white
+    &:before, &:after, span:before, span:after
+      border-color white
+  &-blue
+    color $blue-light
+    &:before, &:after, span:before, span:after
+      border-color $blue-light
+  &-wide
+    width 200px
+  &-extra-wide
+    width 270px
+    
+.textured-dark
+  background url(../images/3.jpg) repeat center
+  
+.btn-secondary
+  display inline-block
+  text-align center
+  padding 6px 8px
+  position relative
+  cursor pointer
+  text-transform lowercase
+  color $blue
+  text-decoration none
+  &:hover
+    &:before, &:after
+      width 50%
+  &:before
+    content ''
+    height 100%
+    width 10%
+    border 1px solid $blue
+    border-right 0
+    left 0
+    top 0
+    position absolute
+    transition all 0.3s
+  &:after
+    content ''
+    height 100%
+    width 10%
+    border 1px solid $blue
+    border-left 0
+    right 0
+    bottom 0
+    position absolute
+    transition all 0.3s
+    
+
+.layout 
+  .balloonman
+    top 70%
+    bottom auto
+    &-left
+      right auto
+      left 20px
+      
+
+.field-wrap
+  position relative
+  &-time, &-date, &-file
+    padding-right 36px
+    position relative
+    &:before
+      content ''
+      width calc(100% - 51px)
+      height 15%
+      border 1px solid #dadada
+      border-bottom 0
+      left 5px
+      top 5px
+      position absolute
+      transition all 0.3s
+      z-index 5
+    &:after
+      content ''
+      width calc(100% - 51px)
+      height 15%
+      border 1px solid #dadada
+      border-top 0
+      left 5px
+      bottom 5px
+      position absolute
+      transition all 0.3s
+      z-index 5
+    button
+      position absolute
+      width 40px
+      height 40px
+      background-color #0083d5
+      background-position center
+      background-repeat no-repeat
+      right 0
+      top 0 
+      border none
+      &:hover
+        background-color darken(#0083d5, 15%)
+      &:focus
+        outline none
+  &-time
+    button
+      background-image url(../images/icons/clock-white.png)
+  &-date
+    button
+      background-image url(../images/icons/calendar-white.png)
+  &-file
+    button
+      background-image url(../images/icons/skrep.png)
+    input
+      width: 0.1px
+      height: 0.1px
+      opacity: 0
+      overflow: hidden
+      position: absolute
+      z-index: -1
+    
+.field
+  color $gray-dark
+  width 100%
+  height 40px
+  padding-left 10px
+  padding-right 13px
+  font-size 1rem
+  background-color white
+  display block
+  color: #6f6f6f
+  text-overflow ellipsis
+  &-textarea
+      resize none
+      height 120px
+      display block
+      padding-top 10px
+      padding-left 10px
+  &::placeholder
+    color: #6f6f6f
+
+label.field
+  padding-top 10px
+  white-space nowrap
+  text-overflow visible
+.row-small
+  margin-left -10px
+  margin-right -10px
+  > div
+    padding-left 10px
+    padding-right 10px
+    
+.captcha
+  height 39px
+  background-color white
+  width 100%
+  display block
+  text-align center
+  img
+    padding-top 4px
+    
+@keyframes wiggle {
+  0% {
+    transform translateZ(0) rotate(8deg)
+  }
+  
+  50% {
+    transform translateZ(0) rotate(-8deg)
+  }
+  
+  100% {
+    transform translateZ(0) rotate(8deg)
+  }
+}

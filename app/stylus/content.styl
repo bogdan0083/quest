@@ -1,0 +1,1115 @@
+#page-content
+	overflow hidden
+.page-wrapper
+	+above(880px)
+		margin-bottom 110px
+		overflow hidden
+.project-process
+	color white
+	.heading
+		.icon
+			position static
+.last-quests
+	overflow hidden
+	padding-bottom 1px
+	
+.last-quests-title, .project-process
+	color white
+	padding 20px 0
+	.heading
+		margin 0
+		
+.last-quests-title
+	background url(../images/2.jpg) repeat center
+	.heading
+		width 70%
+		margin-top 0
+		padding-bottom 0
+		+above(880px)	
+			width auto
+			argin-top 15px
+			padding-bottom 0
+			margin-bottom 0
+.heading
+	text-transform uppercase
+	font-size 1.714rem
+	padding-bottom 10px
+	position relative
+	.icon
+		position absolute
+		right 3px
+		bottom 0
+	&-lined
+		border-bottom 1px solid $blue-light
+		margin-bottom 22px
+		
+	
+	
+.project-process
+	.heading
+		margin-top 5px
+	&-aside
+		float left
+		span
+			margin-top 6px
+			margin-left 4px
+	&-main
+		float right
+	&-step
+		display inline-block
+		vertical-align middle
+		padding-right 15px
+		text-transform uppercase
+		
+		+above(1200px)
+			padding-right 90px
+			position relative
+			font-size 1.143rem
+			.icon
+				margin-right 10px
+			&:before
+				content '.........'
+				width 70px
+				font-size 2rem
+				right 5px
+				top -5px
+				position absolute
+		&:last-child
+			padding-right 0
+			&:before
+				display none
+				
+.last-quests-title
+	.heading
+		+above(880px)
+			margin-top 15px
+		+above(1200px)
+			margin-top 5px
+.last-quests-desc
+	position relative
+	padding-right 150px
+	color #7a899f
+	font-size 1.143rem
+	p
+		margin 0
+	+above(1200px)
+		padding-right 208px
+	.icon
+		position absolute
+		right 20px
+		top 50%
+		transform translateY(-50%)
+	
+
+.last-quests
+	margin 0 -1px
+	background-color $blue
+	position relative
+	z-index 5
+	clearfix()
+.last-quest
+	border 1px solid white
+	margin-bottom -1px
+	height 296px
+	color white
+	text-align center
+	position relative
+	padding 20px 10px 10px
+	transition all 0.3s
+	.last-quest-bg
+		position absolute
+		left 0
+		top 0
+		width 100%
+		height 100%
+		transition all 0.3s
+	&:hover
+		.last-quest-bg
+			filter blur(5px)
+	&-body
+		position relative
+		z-index 5
+		max-width 300px
+		margin 0 auto
+	&-starttime
+		color $blue-light
+	&-name
+		text-transform uppercase
+		margin-top 10px
+	.quest-count
+		font-size 3.571rem
+	h2
+		margin-bottom 10px
+		font-size 1.714rem
+	.quest-date, .quest-price
+		margin-bottom -10px
+		display block
+		.icon
+			margin-bottom -10px
+	&:before
+		content ''
+		left 0
+		top 0
+		width 100%
+		height 100%
+		position absolute
+		opacity 0.3
+		transition all 0.3s
+		z-index 1
+	&:after
+		content ''
+		left 0
+		top 0
+		width 100%
+		height 100%
+		position absolute
+		opacity 0.5
+		background-image linear-gradient(45deg, rgba(0, 2, 1, 0.48) 0%, rgba(0, 85, 128, 0.48) 100%)
+		transition all 0.3s
+		z-index 1
+	&:hover
+		.last-quests-body
+			filter none
+		&:before
+			opacity 0.9
+	&.blue
+		&:before 
+			background-image linear-gradient(22deg, rgba(2, 221, 203, 0.96) 0%, rgba(2, 13, 25, 0.96) 100%)
+	&.dark-blue
+		&:before 
+			background-image linear-gradient(22deg, rgba(41, 186, 253, 0.96) 0%, rgba(2, 13, 25, 0.96) 100%)
+	&.purple
+		&:before 
+			background-image linear-gradient(22deg, rgba(104, 0, 164, 0.96) 0%, rgba(2, 13, 25, 0.96) 100%)
+	+above(880px)
+		width 33.3333%
+		float left
+	
+.last-quests-bottom
+	height 105px
+	border-bottom 1px dashed #5b6d88
+	text-align center
+	position relative
+	.container
+		position relative
+		height 100%
+		padding-top 30px
+	.icon
+		position absolute
+	.i-man
+		&-hang
+			top 0
+			left 10%
+		&-stand
+			bottom 0
+			left 18%
+		&-run-one
+			bottom 0
+			left -100px
+		&-show
+			right 10%
+			bottom 0
+.news, .about-service
+	color white
+
+.columns
+	position relative
+	padding 20px 0 50px
+	> .container > .row > .col-md-6
+		padding 0 30px
+.ropeman
+	display none
+	+above(880px)
+		display block
+		position absolute
+		left 10px 
+		top -620px
+		height 300px
+		background url(../images/ropeman.png) no-repeat
+		width 31px
+		height 363px
+		animation 3s wiggle infinite
+		
+.balloonman
+	display none
+	+above(880px)
+		&.js-free
+			transition transform 20s linear
+		display block
+		position absolute
+		right 20px
+		bottom -250px
+		.icon
+			margin-right 0
+		&-left
+			right auto
+			left 0
+			
+.news-block
+	border-bottom 1px solid #4d617f
+	transition all 0.3s
+	padding-bottom 15px
+	max-width 240px
+	margin 0 auto
+	&:hover
+		border-color white
+		.image-link
+			&:before, &:after, .inner:before, .inner:after 
+				opacity 1
+				transform none
+	clearfix()
+	&-link
+		text-decoration none
+		font-size 1.143rem
+		transition all 0.3s
+		display inline-block
+		min-height 45px
+		clear both
+		display block
+		margin-bottom 10px
+	.date
+		color: #7a899f
+	.btn-secondary
+		float right
+		margin-top -7px
+	.image-link
+		position relative
+		display inline-block
+		margin-bottom 10px
+		img
+			display block
+		&:before, &:after, .inner:before, .inner:after
+			content ''
+			width 30px
+			height 30px
+			border 1px solid white
+			position absolute
+			top 10px
+			left 10px
+			border-bottom 0
+			border-right 0
+			transform translate(-10px, -10px)
+			transition all 0.3s
+			opacity 0
+		&:after
+			right 10px
+			top 10px
+			left auto
+			border 1px solid white
+			border-bottom 0
+			border-left 0
+			transform translate(10px, -10px)
+		.inner:after
+			right 10px
+			bottom 10px
+			top auto
+			left auto
+			border 1px solid white
+			border-top 0
+			border-left 0
+			transform translate(10px, 10px)
+		.inner:before
+			left 10px
+			bottom 10px
+			top auto
+			border 1px solid white
+			border-top 0
+			border-right 0
+			transform translate(-10px, 10px)	
+		.inner
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+.news
+	position relative
+	.row
+		margin-left -30px
+		margin-right -30px
+	.col-md-6
+		padding-left 30px
+		padding-right 30px
+	&:before
+		content ''
+		border-left 1px dashed $gray
+		width 1px
+		height 100%
+		top 0
+		right -30px
+		position absolute
+		display none
+		+above(1200px)
+			display block
+	.btn
+		display block
+		margin 20px auto 0
+		
+.about-service
+	p
+		line-height 1.5
+	.btn
+		display block
+		margin 35px auto 0
+		
+.table
+	width 100%
+	
+.team-table
+	tbody
+		tr 
+			padding 10px
+			+above(880px)
+				padding 0
+	
+.last-quests-inline
+	background none
+	padding-bottom 50px
+	border-bottom 1px dashed $gray
+	min-height 518px
+	.btn
+		margin 0 auto
+		display block
+		clear both
+.last-quest-inline
+	border none
+	width 100%
+	min-height 80px
+	height auto
+	margin-bottom 20px
+	padding 0 10px 5px
+	text-decoration none
+	display block
+	overflow hidden
+	+above(880px)
+		width 100%
+	&.blue:before
+		background-image linear-gradient(22deg, rgba(2, 13, 25, 0.96) 0%, rgba(2, 221, 203, 0.96) 100%)
+		opacity 0.7
+	&.dark-blue:before
+		background-image linear-gradient(22deg, rgba(2, 13, 25, 0.96) 0%, rgba(41, 186, 253, 0.96) 100%)
+		opacity 0.7
+	&.purple:before
+		background-image linear-gradient(22deg, rgba(2, 13, 25, 0.96) 0%, rgba(104, 0, 164, 0.96) 100%)
+		opacity 0.7
+	.col-md-2, .col-md-6, .col-md-4
+		padding 0
+	.last-quest-body
+		max-width 100%
+		padding-top 0
+		padding 1px
+	.last-quest-name
+		float left
+	.quest-count
+		font-size 2.571rem
+		float right
+		margin 0
+	&-bottom 
+		clearfix()
+		clear both
+		text-align center
+		padding-bottom 10px
+		.row
+			margin 0
+	.last-quest-starttime
+		text-align left
+	.quest-date, .quest-price
+		text-align center
+		margin-top -14px
+		p
+			margin 0
+			margin-top 14px
+			display inline-block
+			vertical-align middle
+	.quest-price
+		text-align right
+		
+.breadcrumbs
+	padding 20px 0 5px
+	a, span
+		display inline-block
+		margin-right 4px
+		position relative
+	a
+		text-decoration none
+		margin-right 5px
+		padding-left 16px
+		color #74839a
+		position relative
+		&:hover
+			color white
+			&:before
+				sprite($door_small_open)
+		&:before
+			content ''
+			sprite($door_small)
+			display inline-block
+			position absolute
+			vertical-align middle
+			left 0px
+	span
+		margin-right 0
+		&:before
+			content ''
+			sprite($door_small_open)
+			display inline-block
+			vertical-align middle
+			margin-right 4px
+			
+.heading-title
+	position relative
+	.heading
+		padding-right 120px
+	.team-count
+		position absolute
+		right 0
+		bottom 0
+		.icon
+			margin-right -4px
+			&.active
+				sprite($man_active)
+			
+.table
+	.table-accomplished
+		color $blue-light
+		display block
+		text-align center
+	thead
+		display none
+		+above(880px)
+			display table-header-group
+	th
+		font-size: 1.143rem
+		height 40px
+		text-align center
+		font-weight 400
+		color #7a899f
+		text-align center
+		border-top 1px dashed $blue
+		display none
+		+above(880px)
+			display table-cell
+	td
+		padding 15px 10px
+		vertical-align middle
+	
+	tr
+		border-bottom 1px dashed $gray
+		
+	+between(100px, 880px)
+		display block
+		.players-wrap
+			margin-top 10px		
+		thead
+			tr
+				padding 10px 0 0
+		tr, td, tbody
+			display block
+		td
+			padding 0
+		tr
+			margin 8px 0
+			padding-bottom 5px
+			border none
+			clearfix()	
+	.team-remained
+		text-align center
+		margin-top 20px
+		margin-bottom 10px
+	.btn
+		margin 0 auto
+		display block
+	tbody tr:nth-child(2n+1)
+		background rgba(white, 0.05)
+		
+	+above(880px)
+		
+		.player-wrap
+			position relative
+			margin 7px 0
+		.rating
+			position absolute
+			right 0
+			top -4px
+		.team-remained
+			margin-top 7px
+	
+.rating
+	color $blue
+	.icon
+		+ span
+			vertical-align middle
+			margin-top 4px
+			
+.layout-group
+	+above(1200px)
+		> .row 
+			margin 0 -40px
+			> .col-md-6
+				padding 0 40px
+				border-right 1px dashed $gray
+				&:last-child
+					border-right 0
+.news-inner:before
+	display none
+	+above(1200px)
+		display none 
+	
+.layout
+	padding-bottom 50px
+	position relative
+.form-group
+	padding 13px 0 10px
+	+above(880px)
+		padding 10px 0
+	border-bottom 1px dashed $gray
+	&-caption
+		color $gray
+	&:first-child
+		padding-top 0
+	&-input-caption
+		display none
+		+above(880px)
+			display inline
+.col-inline
+	vertical-align middle
+	display inline-block
+	margin-right -4px
+	vertical-align middle
+	float none !important
+	+above(880px)
+		display inline-block
+		margin-right -4px
+		float none  !important
+		vertical-align middle
+		
+.col-inline-xs
+	+below(880px)
+		display inline-block
+		margin-right -4px
+		float none
+		vertical-align middle
+		
+
+.field-wrap-normal
+	position relative
+	&:before
+		content ''
+		width calc(100% - 10px)
+		height 15%
+		border 1px solid #dadada
+		border-bottom 0
+		left 5px
+		top 5px
+		position absolute
+		transition all 0.3s
+		z-index 5
+	&:after
+		content ''
+		width calc(100% - 10px)
+		height 15%
+		border 1px solid #dadada
+		border-top 0
+		left 5px
+		bottom 5px
+		position absolute
+		transition all 0.3s
+		z-index 5
+.amount-input
+	position relative
+	margin 10px 0
+	&-caption
+		position absolute
+		right -45px
+		color white 
+		opacity 0.4
+		top 50%
+		margin-top -10px
+	&:before
+		content ''
+		width calc(100% - 10px)
+		height 15%
+		border 1px solid #dadada
+		border-bottom 0
+		left 5px
+		top 5px
+		position absolute
+		transition all 0.3s
+		z-index 5
+	&:after
+		content ''
+		width calc(100% - 10px)
+		height 15%
+		border 1px solid #dadada
+		border-top 0
+		left 5px
+		bottom 5px
+		position absolute
+		transition all 0.3s
+		z-index 5
+	.sub, .add
+		border none
+		position absolute
+		top 50%
+		margin-top -5px
+		left 10px
+		background-color transparent
+		padding 0
+		.icon
+			margin 0
+			display block
+	.field
+		text-align center
+		&:focus ~ span
+			opacity 1gh
+	.add
+		left auto
+		right 10px
+		
+.form-group .ui-selectmenu-button
+	margin 10px 0
+	
+.checkbox-group
+	.checkbox:first-child
+		+above(1200px)
+			margin-top 0
+.checkbox
+	display block
+	margin 15px 0
+	input
+		display none
+		&:checked 
+			+ span
+				color white
+				&:before
+					left 0
+					sprite($checkbox_checked)
+	span
+		display inline-block
+		padding-left 50px
+		position relative
+		color $gray
+		padding 5px 0 5px 50px
+		&:before
+			content ''
+			cursor pointer
+			position absolute
+			left 17px
+			top 50%
+			margin-top -13px
+			sprite($checkbox)
+	&-inline
+		display inline-block
+		margin-right 25px
+		
+
+.create-form
+	.btn
+		display block
+		margin 30px auto 
+		
+.teams-page
+	.heading
+		margin-bottom 0
+		margin-top 20px
+	.balloonman
+		bottom -120px
+		top auto
+.ceo-block
+	padding-top 30px
+	.container
+		max-width 1065px
+		
+
+.gather-team-popup
+	width 290px
+	color white
+	position relative
+	padding 20px 0 35px
+	display none
+	.checkbox
+		span
+			color white
+	+above(880px)
+		width 630px
+	.btn
+		margin 30px auto 0
+		display block
+		width 90%
+		+above(880px)
+			width 270px
+	.close
+		position absolute
+		right 10px
+		top 10px
+		+above(880px)
+			top 25px
+			right 15px
+	.heading
+		padding-left 70px
+		margin-bottom 0
+		.icon
+			right auto
+			left 2px
+		+above(880px)
+			padding-left 100px
+			.icon
+				left 30px
+.gather-team-form
+	position relative
+	overflow hidden
+	.wrapper
+		padding 10px 20px 0
+		+above(880px)
+			background-color rgba(white, 0.1)
+			border-bottom 1px dashed $gray
+			.input-group
+				border-bottom 1px dashed $gray
+				padding-bottom 5px
+				clearfix()
+				
+.news-page, .news-article-page
+	.news-block
+		margin 20px auto
+	.news-row 
+		margin 0 -35px
+		> .col-md-3
+			padding 0 35px
+			
+
+.news-article
+	padding-bottom 30px
+	border-bottom 1px dashed $gray
+	.article-img
+		margin-bottom 20px
+		+above(880px)
+			margin-bottom 0
+	.date
+		float right
+		color $gray
+	.article-inner
+		margin-top 34px
+		clear both
+		+above(880px)
+			margin-left -30px
+			
+.registration-form, .feedback-form, .change-password-form
+	+above(880px)
+		.form-group label
+			text-align right
+	.btn
+		margin-top 20px
+		
+.registration-form
+	.form-group:first-child 
+		border-top 1px dashed white
+		padding-top 10px
+		
+.reg-socials
+	.social-icon-wrap
+		position relative
+		display inline-block
+		margin 0 3px
+		
+
+.social-icon-wrap
+	position relative
+	&:hover
+		&:before, &:after, .icon:before, .icon:after 
+			opacity 1
+			transform none
+	.icon
+		display inline-block
+		position relative
+		margin 0
+	&:before, &:after, .icon:before, .icon:after
+		content ''
+		width 6px
+		height 6px
+		border 1px solid white
+		position absolute
+		top 5px
+		left 5px
+		z-index 1
+		border-bottom 0
+		border-right 0
+		transform translate(-5px, -5px)
+		transition all 0.3s
+		opacity 0
+	&:after
+		right 5px
+		top 5px
+		left auto
+		border 1px solid white
+		border-bottom 0
+		border-left 0
+		transform translate(5px, -5px)
+	.icon:after
+		right 5px
+		bottom 5px
+		top auto
+		left auto
+		border 1px solid white
+		border-top 0
+		border-left 0
+		transform translate(5px, 5px)
+	.icon:before
+		left 5px
+		bottom 5px
+		top auto
+		border 1px solid white
+		border-top 0
+		border-right 0
+		transform translate(-5px, 5px)
+			
+.reg-suggest
+	margin-bottom 30px
+	+above(880px)
+		margin-bottom 0
+	h4
+		+above(880px)
+			display inline-block
+			margin-right 10px
+	.social-icon-wrap
+		margin 0 5px
+		
+.star-blue
+	color $blue-light
+	margin-left 3px
+	
+.cabinet-header
+	position relative
+	.user-type
+		position absolute
+		right 70px
+		bottom 0px
+		font-weight 500
+		font-size: 1.143rem
+		display none
+		span
+			color $blue
+		+above(880px)
+			display block
+	
+      
+.cabinet-aside-nav
+	max-width 90%
+	margin 0 auto 30px
+	.i-notif
+		position relative
+		left 4px
+	+above(880px)
+		max-width 100%
+	.icon-wrap
+		display inline-block
+		vertical-align middle
+		width 35px
+		text-align center
+	> a, > span
+		display block
+		padding 10px
+		border-bottom 1px solid white
+		text-decoration none
+		font-size: 1.143rem;
+		transition all 0.1s
+	> a:hover, > span
+		color $blue-light
+		border-color $blue-light
+		.icon
+			background transparent
+			&:before
+				display block
+				opacity 1
+	.text
+		padding-left 10px	
+		
+.private-data-table
+	+above(880px)
+		tbody
+			tr
+				height 80px
+		td
+			float none
+			padding 0 15px
+		.table-caption
+			display block
+			text-align right
+			color: #7a899f
+		.btn
+			width 125px
+			
+.js-hidden
+	display none !important
+	
+.private-data-table
+	+between(100px, 880px)
+		tr
+			padding 20px 0
+	.table-value
+		margin 10px 0
+		display block
+		
+.cabinet-table-heading
+	text-align center
+	margin-top 4px
+	margin-bottom 0
+	+above(880px)
+		margin-bottom 15px
+		
+.table
+	td
+		+above(880px)
+			float none
+			
+.history-table, .current-teams-table, .quests-table, .wish-table, .wish-table-user
+	text-align left
+	.field-wrap-file, .field-wrap-normal, .field-wrap-select
+		margin-top 0
+		margin-bottom 0
+		+above(880px)
+			margin-top 1em
+			margin-bottom 1em
+	.field-wrap-file
+		margin-right 0px
+		margin-left -20px
+		+above(880px)
+			margin 0
+	.btn
+		min-width 0
+		+above(880px)
+			min-width 120px
+	+above(880px)
+		text-align center
+		tbody tr
+			height 80px
+	tr
+		padding 20px 10px 10px
+		border-bottom 1px dashed $gray
+	td
+		padding 10px 10px
+		position relative
+		display inline-block	
+		+above(880px)
+			display table-cell
+			&:last-child:after
+				display none !important
+			&:after
+				content ''
+				width 1px
+				height 40px
+				background-color $gray
+				position absolute
+				right 0
+				top 50%
+				margin-top -20px
+	.field
+		text-align center
+		
+.quests-table
+	td
+		position static
+		+above(880px)
+			position relative
+	tr
+		position relative
+	+above(880px)
+		td:first-child
+			width 1%
+		tbody tr:first-child td
+			&:after
+				display none
+	.field
+		text-align left
+	.field-wrap-file
+		margin 0
+
+.player-wrap 
+	> span
+		text-decoration underline
+		
+.wish-table
+	.player-wrap
+		text-align left
+	+above(880px)
+		td:first-child
+			width 1%
+.btn-table-wrap
+	.row-close
+		position absolute
+		right 5px
+		top 5px
+		+above(880px)
+			position relative
+			right auto
+			top auto
+			left auto 
+			bottom auto
+	+above(880px)
+		.row-close
+			float right
+			margin-top 11px
+			margin-left 10px
+		.btn
+			overflow hidden
+			width auto
+			min-width 0
+			
+.wish-table-user
+	+above(880px)
+		.row-close
+			margin-top 0
+		.btn
+			min-width 0
+.cabinet-user-rating
+	font-size: 1.143rem;
+	margin 20px 0
+	+above(880px)
+		position absolute
+		bottom 0
+		margin 13px 0
+		right 60px
+		.rating
+			display inline-block
+			vertical-align middle
+			
+.cabinet-header .user-type-player
+	right 240px
+	
+
+
+.colored-blue
+	color $blue
+	
+.colored-blue-light
+	color $blue-light
+	
+.change-password-form
+	.btn
+		width 100%
+		+above(880px)
+			width 210px	
+	.form-group:first-child 
+		border-top 1px dashed $blue
+		padding-top 10px
+	+above(880px)
+		label
+			text-align right
+			
+.arrow-up
+	sprite($balloon)
+	background-color transparent
+	position fixed
+	bottom 5px
+	right 10px
+	border none
+	display none
+	z-index 50
+	+above(880px)
+		display none !important
+	&:focus
+		outline none
+		
+.js-runner
+	transition all 10s linear
+	&-active
+		transform translateX(3000px)
