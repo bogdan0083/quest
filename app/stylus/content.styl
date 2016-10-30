@@ -204,11 +204,11 @@
 			bottom 0
 			left 18%
 		&-run-one
-			bottom 0
+			bottom 4px
 			left -100px
 		&-show
 			right 10%
-			bottom 0
+			bottom 3px
 .news, .about-service
 	color white
 
@@ -223,11 +223,11 @@
 		display block
 		position absolute
 		left 10px 
-		top -620px
-		height 300px
+		top -220px
 		background url(../images/ropeman.png) no-repeat
 		width 31px
 		height 363px
+		transform-origin 100% 0
 		animation 3s wiggle infinite
 		
 .balloonman
@@ -667,7 +667,7 @@
 		right 10px
 		
 .form-group .ui-selectmenu-button
-	margin 10px 0
+	margin 14px 0
 	
 .checkbox-group
 	.checkbox:first-child
@@ -686,9 +686,8 @@
 					sprite($checkbox_checked)
 	span
 		display inline-block
-		padding-left 50px
 		position relative
-		color $gray
+		color rgba(white, 0.4)
 		padding 5px 0 5px 50px
 		&:before
 			content ''
@@ -701,8 +700,35 @@
 	&-inline
 		display inline-block
 		margin-right 25px
-		
-
+	&-secondary
+		display: inline-block
+		input:checked + span:after
+			display: block
+		input:checked + span:before
+			width: 20px
+			height: 20px
+			margin-top: -10px
+			background: white
+		span
+			padding-left: 40px
+			color white
+			&:before
+				background: white
+				width: 20px
+				left 0
+				height: 20px
+				margin-top: -10px
+				border 1px solid #6f6f6f
+			&:after
+				content ''
+				background url("../images/check.png") no-repeat center
+				width: 14px
+				height: 10px
+				top 50%
+				margin-top: -5px
+				left 3px
+				position: absolute
+				display: none
 .create-form
 	.btn
 		display block
@@ -793,14 +819,14 @@
 		+above(880px)
 			margin-left -30px
 			
-.registration-form, .feedback-form, .change-password-form
+.registration-form, .feedback-form, .change-password-form, .login-form
 	+above(880px)
 		.form-group label
 			text-align right
 	.btn
 		margin-top 20px
 		
-.registration-form
+.registration-form, .login-form
 	.form-group:first-child 
 		border-top 1px dashed white
 		padding-top 10px
@@ -1110,6 +1136,55 @@
 		outline none
 		
 .js-runner
-	transition all 10s linear
 	&-active
-		transform translateX(3000px)
+		animation 10s runnerRight linear
+		&.js-runner-left
+			animation 10s runnerLeft linear 11s
+	&-left
+		left auto !important
+		right -50px !important
+
+
+.balloon-arrow {
+	background-image: url("../images/icons/balloon.png");
+	width: 50px;
+	height: 92px;
+	background-color: transparent;
+	position: fixed;
+	bottom: 5px;
+	right: 10px;
+	border: none;
+	display: none;
+	z-index: 50;
+}
+
+.balloon-arrow:focus {
+	outline: none;
+}
+
+.login-form-bottom
+	text-align: center
+	padding-top: 15px
+	padding-bottom: 20px
+	+above(880px)
+		text-align: left
+	.row
+		margin 0 -17px
+	.checkbox, .btn, .btn-secondary
+		margin 10px 10px
+		+above(880px)
+			margin 10px 11px
+		+above(1200px)
+			margin 10px 12px
+	.btn-secondary, .btn, .checkbox
+		width: 139px
+		+above(1200px)
+			width: 175px
+
+.notifications-table
+	td
+		padding 10px 20px
+		border-top: 1px dashed white
+	.btn
+		+above(880px)
+			float: right

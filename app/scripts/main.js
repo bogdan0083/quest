@@ -66,7 +66,6 @@ $(document).ready(function() {
     }
 
 
-
     // fancybox для модальных окон.
     $('.fancybox-modal').fancybox({
         closeBtn: false,
@@ -84,24 +83,29 @@ $(document).ready(function() {
      var initRopemanTop;
 
     // Параллакс анимации человечков при скролле.    
-    if ($('.js-ropeman').length && $(window).width() > 880) {
-
-        initRopemanTop = $('.js-ropeman').position().top;
-        
-        $(window).on('scroll', parallaxRopeman);
-    }
+    // if ($('.js-ropeman').length && $(window).width() > 880) {
+    //
+    //     initRopemanTop = $('.js-ropeman').position().top;
+    //
+    //     $(window).on('scroll', parallaxRopeman);
+    // }
 
     // Параллакс анимации человечков при скролле.
-    if ($('.js-balloonman').length && $(window).width() > 880) {
+    if ($(window).width() > 880) {
 
         parallaxBalloonman();
+        onReachFooter();
 
         $(window).on('scroll', parallaxBalloonman);
+        $(window).on('scroll', onReachFooter);
     }
+
+    // Переменная для проверки достигли мы самого низа страницы или нет. Если да - то запускаем человечка на шаре
 
     var bottomIsReached = false;
 
     // функция-callback для параллакса
+
     function parallaxBalloonman(e) {
 
         var wScroll = $(window).scrollTop();
@@ -113,14 +117,12 @@ $(document).ready(function() {
 
         $('.js-balloonman').css('transform', 'translateY(-' + wScroll * 0.4 + 'px)');
 
-        if ($('.js-balloonman').hasClass('balloonman-main')) {
-            return; }
         // Проверяем, если доскролили до конца
         if (reachedBottom(wScroll, wHeight, dHeight) && bottomIsReached) {
 
-            $(window).off();
+            $(window).off('scroll', parallaxBalloonman);
 
-            var $balloonMan = $('.js-balloonman:not(".balloonman-main")');
+            var $balloonMan = $('.js-balloonman');
 
             $balloonMan.addClass('js-free').css('transform', 'translateY(-6000px)');
 
@@ -138,15 +140,22 @@ $(document).ready(function() {
             }, 20000);
         }
     }
-
     // функция-callback для параллакса
-    function parallaxRopeman(e) {
-        e.preventDefault();
-
+    function parallaxRopeman() {
         $('.js-ropeman').css('top', initRopemanTop + ($(window).scrollTop() * 0.35) + 'px');
     }
 
+    // функция-callback для футера
 
+    function onReachFooter(e) {
+
+        var wScroll = $(window).scrollTop();
+        var wHeight = $(window).height();
+
+        if ( (wScroll + wHeight ) >= $('.footer').offset().top) {
+            $('.footer-ladder-main').show();
+        }
+    }
     // Функция для проверки скролла. Если мы в самом низу страницы то возвращает true, иначе false
     // ----------------------------------------
 
@@ -161,6 +170,9 @@ $(document).ready(function() {
             return false;
         }
     }
+
+    // -----------------------------------------
+
 
     // Селект
     $('.field-select').selectmenu();
@@ -180,22 +192,35 @@ $(document).ready(function() {
 
         e.preventDefault();
 
-        $(this).parent().find('input').trigger('click');
+        $(this)
+            .parent()
+            .find('input')
+            .trigger('focus')
+            .trigger('click');
+
     });
 
     // бегущий человечек на главной
 
+    var runnersIsLaunched = false;
+
     if ($('.js-runner').length) {
-
         launchRunner();
-
-        $(window).on('scroll', launchRunner);
     }
 
     function launchRunner(e) {
-        if ($(window).scrollTop() + $(window).height() >= $('.last-quests-bottom').offset().top) {
-            $('.js-runner').addClass('js-runner-active');
-        }
+
+        $('.js-runner').addClass('js-runner-active');
+
+        var timer = setInterval(function () {
+               $('.js-runner').removeClass('js-runner-active');
+
+                setTimeout(function () {
+                    $('.js-runner').addClass('js-runner-active');
+                }, 10);
+
+        }, 20000);
+
     }
     // Делаем активным последнего человечка на ховер
 

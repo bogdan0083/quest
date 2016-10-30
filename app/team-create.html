@@ -74,7 +74,7 @@
                                             <div class="row">
                                                 <label class="col-md-6 col-xs-12 col-inline" for="questselect">Выберите квест, на который хотите пойти</label>
                                                 <div class="col-md-6 col-xs-12 col-inline">
-                                                    <select name="quest-name" class="field-select">
+                                                    <select name="questselect" class="field-select">
                                                         <option disabled selected>квест</option>
                                                         <option value="">Побег из беглама</option>
                                                         <option value="">Побег из беглама</option>
@@ -98,10 +98,16 @@
                                                             </p>
                                                         </div>
                                                         <div class="col-md-6 col-xs-6">
-                                                            <p class="field-wrap field-wrap-time">
-                                                                <input type="text" class="field field-time" placeholder="время">
-                                                                <button class="field-trigger js-field-trigger"></button>
-                                                            </p>
+                                                                <select name="quest-time" class="field-select">
+                                                                    <option disabled selected>время</option>
+                                                                    <option value="">с 12 до 15</option>
+                                                                    <option value="">с 15 до 18</option>
+                                                                    <option value="">с 18 до 21</option>
+                                                                    <option value="">с 21 до 00</option>
+                                                                    <option value="">с 00 до 03</option>
+                                                                </select>
+                                                                <!--<input type="text" class="field field-time" placeholder="время">-->
+                                                                <!--<button class="field-trigger js-field-trigger"></button>-->
                                                         </div>
                                                     </div>
                                                 </div>
